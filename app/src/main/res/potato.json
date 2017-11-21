@@ -1,0 +1,19 @@
+{
+  "potatoes": [
+    {
+      "name": "Kerr's Pink",
+      "icon": "kerrs-pink.jpeg",
+      "description": "Kerr's Pink is a potato cultivar in wide production in Ireland and the United Kingdom and many other countries. Although often quoted as an Irish potato, the cultivar was actually created by J. Henry of Cornhill, Scotland, in 1907",
+    },
+    {
+      "name": "Dore",
+      "icon": "dore.jpeg",
+      "description": "Kerr's Pink is a potato cultivar in wide production in Ireland and the United Kingdom and many other countries. Although often quoted as an Irish potato, the cultivar was actually created by J. Henry of Cornhill, Scotland, in 1907",
+    },
+    {
+      "name": "Duke of York",
+      "icon": "duke-of-york.jpeg",
+      "description": "Kerr's Pink is a potato cultivar in wide production in Ireland and the United Kingdom and many other countries. Although often quoted as an Irish potato, the cultivar was actually created by J. Henry of Cornhill, Scotland, in 1907",
+    }
+  ]
+}
