@@ -24,21 +24,21 @@ public class PotatoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_potato);
 
-        final PotatoAdapter myAdapter = new PotatoAdapter(this);
+        PotatoAdapter myAdapter = new PotatoAdapter(this);
         GridView gridview = (GridView) findViewById(R.id.gridview);
         gridview.setAdapter(myAdapter);
 
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
-                Toast.makeText(PotatoActivity.this, "" + position + " " + myAdapter.potatoInfo.get(position).get("name"),
+                Toast.makeText(PotatoActivity.this, "" + position,
                         Toast.LENGTH_SHORT).show();
             }
         });
 
         try {
             JSONObject obj = new JSONObject(loadJSONFromAsset());
-            JSONArray m_jArry = obj.optJSONArray("potatoes");
+            JSONArray m_jArry = obj.getJSONArray("potatoes");
             HashMap<String, String> p;
 
             for (int i = 0; i < m_jArry.length(); i++) {
@@ -60,7 +60,6 @@ public class PotatoActivity extends AppCompatActivity {
                 Resources resources = getResources();
                 int pIconId = resources.getIdentifier(p_icon, "drawable", getPackageName());
                 myAdapter.potatoIcons.add(pIconId);
-
             }
         } catch (JSONException e) {
             e.printStackTrace();
